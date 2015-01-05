@@ -1,17 +1,15 @@
 def merge(arr1,arr2,result)
-  i = 0
-  j = 0
   if arr1.length == 0
     result.insert(-1,arr2).flatten
   elsif arr2.length == 0
     result.insert(-1,arr1).flatten
   else
-    if arr1[i] < arr2[j]
-      add = arr1[i]
-      merge(arr1[(i+1)..-1], arr2,(result.insert(-1,add)))
+    if arr1[0] < arr2[0]
+      add = arr1[0]
+      merge(arr1[(1)..-1], arr2,(result.insert(-1,add)))
     else
-      add = arr2[j]
-      merge(arr1, arr2[(j+1)..-1],(result.insert(-1,add)))
+      add = arr2[0]
+      merge(arr1, arr2[(1)..-1],(result.insert(-1,add)))
     end
   end
 end
