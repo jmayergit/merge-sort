@@ -1,4 +1,7 @@
 def merge(arr1,arr2,result)
+  """
+  arr1 and arr2 must be sorted from low to high in order for result to be sorted
+  """
   if arr1.length == 0
     result.insert(-1,arr2).flatten
   elsif arr2.length == 0
