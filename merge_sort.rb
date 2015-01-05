@@ -17,7 +17,7 @@ def merge(arr1,arr2,result)
   end
 end
 
-def merge_sort(anArr)
+def sort(anArr)
 
   if anArr.length <= 1
     anArr
@@ -31,8 +31,8 @@ def merge_sort(anArr)
     end
   else
     mid = (anArr.length) / 2
-    merge(merge_sort(anArr[0...mid]),merge_sort(anArr[mid..-1]),[])
+    merge(sort(anArr[0...mid]),sort(anArr[mid..-1]),[])
   end
 end
 
-p(merge_sort([2,1,5,3,4,10,90,66]))
+p(sort([2,1,5,3,4,10,90,66]))
